@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yarolegovich.controllableanimator.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/animated_view_host"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/translation_x_target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View1"
+            style="@style/AnimationTargetStyle"/>
+
+        <TextView
+            android:id="@+id/translation_y_target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="View2"
+            style="@style/AnimationTargetStyle"/>
+
+        <TextView
+            android:id="@+id/scale_target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="View3"
+            style="@style/AnimationTargetStyle"/>
+
+        <TextView
+            android:id="@+id/alpha_target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="View4"
+            style="@style/AnimationTargetStyle"/>
+    </FrameLayout>
+
+    <SeekBar
+        android:id="@+id/anim_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        style="@style/ControlStyle"/>
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/update_mode_switch"
+        android:text="Update progress with selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ControlStyle"/>
+
+    <Button
+        android:id="@+id/start_anim_btn"
+        android:text="Animate to selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ControlStyle"/>
+
+</LinearLayout>
