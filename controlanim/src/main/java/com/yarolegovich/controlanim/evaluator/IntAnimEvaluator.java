@@ -27,7 +27,7 @@ public class IntAnimEvaluator<Target> extends AnimEvaluator {
 
   public void evaluate(float fraction) {
     int result = (int) (startValue + fraction * delta);
-    property.set(target, result);
+    property.setValue(target, result);
   }
 
 }
